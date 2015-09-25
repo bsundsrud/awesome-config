@@ -2,7 +2,10 @@
 Config for AwesomeWM + XFCE4
 
 Most bits taken from [here](http://awesome.naquadah.org/wiki/Awesome_and_Xfce4), added APW for volume control widget.  
+
 Assumes zenburn theme is installed system-wide.
+
+Uses `xfce4-panel` for the top bar and XFCE chrome for GTK apps.  Naughty and the system notification daemons seem to fight it out and I haven't had the will to figure out what part of the system is starting DBus notification managers.
 
 Compositing can be added with compton, config below taken from [here](http://ubuntuforums.org/showthread.php?t=2144468&p=12644745#post12644745) and placed in `~/.compton.conf`:
 
