@@ -58,7 +58,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
+beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -469,9 +469,9 @@ awful.rules.rules = {
     { rule = { class = "jetbrains-pycharm" },
       properties = { tag = tags[1][3] } },
     { rule = { class = "Xfce4-notifyd" },
-      properties = { focus = false, raise = false, floating = true, border_width = 0 } },
+      properties = { opacity = .9, focus = false, raise = false, floating = true, border_width = 0 } },
     { rule = { type = "notification" },
-      properties = { focus = false, raise = false, floating = true, border_width = 0 } },
+      properties = { opacity = .9, focus = false, raise = false, floating = true, border_width = 0 } },
 }
 -- }}}
 
@@ -546,8 +546,7 @@ end)
 
 client.connect_signal("focus", 
     function(c) 
-        --c.border_color = beautiful.border_focus
-        c.border_color = "#0F93FF"
+        c.border_color = beautiful.border_focus
     end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
