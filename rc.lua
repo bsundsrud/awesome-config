@@ -10,7 +10,6 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-local vicious = require("vicious")
 local volume = require("volume")
 local APW = require("apw/widget")
 
@@ -227,18 +226,6 @@ for s = 1, screen.count() do
     left_layout:add(mypromptbox[s])
    -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-
---    cores_graph_conf ={height = 18, width = 8, rounded_size = 0.3}
---    cores_graphs = {}
---    for i=1,4 do
---        cores_graphs[i] = blingbling.progress_graph( cores_graph_conf)
---        vicious.register(cores_graphs[i], vicious.widgets.cpu, "$"..(i+1).."",1)
---    end
---
---    for i=1,4 do
---        right_layout:add(cores_graphs[i])
---    end
-
 
     -- if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(APW)
