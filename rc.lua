@@ -272,6 +272,8 @@ globalkeys = awful.util.table.join(
     -- END CUSTOM KEYBINDINGS
     awful.key({ modkey,           }, "Left",   xfce_switch_action(awful.tag.viewprev)        ), 
     awful.key({ modkey,           }, "Right",  xfce_switch_action(awful.tag.viewnext)        ),
+    awful.key({ modkey,           }, ",", xfce_switch_action(awful.tag.viewprev)             ),
+    awful.key({ modkey,           }, ".", xfce_switch_action(awful.tag.viewnext)             ),
     awful.key({ modkey,           }, "Escape", xfce_switch_action(awful.tag.history.restore) ),
 
     awful.key({ modkey,           }, "j",
